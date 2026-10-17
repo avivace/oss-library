@@ -38,3 +38,15 @@ make readme
 ```
 
 Commit both `library/library.json` and the regenerated `README.md`.
+
+## Web app
+
+`app/` is a small Vue app to search and filter the library. It reads `library/library.json` directly, so new entries show up without extra steps. It needs Node.js (22, 24) and uses Yarn 4, which [Corepack](https://github.com/nodejs/corepack) installs automatically:
+
+```sh
+cd app
+corepack enable   # once, to get the pinned Yarn version
+yarn
+yarn dev          # development server
+yarn build        # production build in app/dist
+```
