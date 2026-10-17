@@ -19,7 +19,7 @@ Each entry in `library/library.json` follows [`library/schema.json`](library/sch
 }
 ```
 
-- `type`: `book`, `report`, `conference-paper` or `preprint`
+- `type`: `book`, `report`, `paper`, `conference-paper` or `preprint`
 - `date`: publication date as `YYYY-MM-DD`; use `YYYY-MM` or `YYYY` when only that is known
 - `tags` (optional): lowercase topic tags, e.g. `ospo`
 - `license`: an [SPDX identifier](https://spdx.org/licenses/) (e.g. `CC-BY-4.0`), or `null` if proprietary or unknown

@@ -14,10 +14,18 @@ Browse and search it at **[ossl.avivace.com](https://ossl.avivace.com)**.
 
 - [Roads and Bridges: The Unseen Labor Behind Our Digital Infrastructure](https://www.fordfoundation.org/learning/library/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/) - Nadia Eghbal (2016)
 
+## Papers
+
+- [Do CONTRIBUTING Files Provide Information about OSS Newcomers’ Onboarding Barriers?](https://dl.acm.org/doi/10.1145/3611643.3616288) - Felipe Fronchetti, David C. Shepherd, Igor Wiese, Christoph Treude, Marco Aurélio Gerosa, Igor Steinmacher (2023)
+- [Beyond the Repository](https://dl.acm.org/doi/10.1145/3605160) - Amanda Casari, Julia Ferraioli, Juniper Lovato (2023)
+- [Freeriding and Rebellion: An Investigation of Open Source Vendor Relicensing and Member Hard Forking Events](https://onlinelibrary.wiley.com/doi/10.1111/isj.70060) - Dawn Foster, Matt Germonprez (2026)
+- [Making Open Source Project Health Transparent](https://ieeexplore.ieee.org/document/9504501) - Sean P. Goggins, Matt Germonprez, Kevin Lumbard (2021)
+
 ## Conference papers
 
 - [Adoption of the Organization of Help According to the Use Case Technique in the Open-Source Software Development Process](https://link.springer.com/chapter/10.1007/978-3-031-37963-5_72) - Lucrecia Llerena, Nancy Rodriguez, Angelita Bosquez, John W. Castro, Lister Mera (2023)
-- [Do CONTRIBUTING Files Provide Information about OSS Newcomers’ Onboarding Barriers?](https://dl.acm.org/doi/10.1145/3611643.3616288) - Felipe Fronchetti, David C. Shepherd, Igor Wiese, Christoph Treude, Marco Aurélio Gerosa, Igor Steinmacher (2023)
+- [How to characterize the health of an Open Source Software project? A snowball literature review of an emerging practice](https://arxiv.org/abs/2208.01105) - Johan Linåker, Efi Papatheocharous, Thomas Olsson (2022)
+- [Making Impact Visible in Funding of Open Source Software: A Study of the Funders’ Perspective](https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESEM.2026.8) - Johan Linåker, Kevin Lumbard, Georg Link (2026)
 
 ## Preprints
 
