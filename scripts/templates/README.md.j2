@@ -1,0 +1,8 @@
+# OSS Library
+{% for section, type in [("Books", "book"), ("Reports", "report")] %}
+## {{ section }}
+
+{% for r in resources if r.type == type -%}
+- {% if r.links %}[{{ r.title }}]({{ r.links[0] }}){% else %}{{ r.title }}{% endif %} - {{ r.authors | join(", ") }}
+{% endfor -%}
+{% endfor -%}

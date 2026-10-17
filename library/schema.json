@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OSS Library Entry",
+  "type": "object",
+  "required": ["resources"],
+  "properties": {
+    "resources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/resource" }
+    }
+  },
+  "$defs": {
+    "resource": {
+      "type": "object",
+      "required": ["type", "title", "authors", "open_access", "links"],
+      "additionalProperties": false,
+      "properties": {
+        "type": { "enum": ["book", "report"] },
+        "title": { "type": "string" },
+        "authors": { "type": "array", "items": { "type": "string" } },
+        "open_access": { "type": "boolean" },
+        "license": {
+          "type": ["string", "null"],
+          "description": "SPDX identifier (e.g. CC-BY-4.0), or null if proprietary/unknown"
+        },
+        "links": { "type": "array", "items": { "type": "string", "format": "uri" } }
+      }
+    }
+  }
+}

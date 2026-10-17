@@ -1,0 +1,31 @@
+{
+  "$schema": "./schema.json",
+  "resources": [
+    {
+      "type": "book",
+      "title": "Working in Public: The Making and Maintenance of Open Source Software",
+      "authors": ["Nadia Asparouhova"],
+      "open_access": false,
+      "license": null,
+      "links": []
+    },
+    {
+      "type": "book",
+      "title": "Program Management for Open Source Projects",
+      "authors": ["Ben Cotton"],
+      "open_access": false,
+      "license": null,
+      "links": []
+    },
+    {
+      "type": "report",
+      "title": "Roads and Bridges: The Unseen Labor Behind Our Digital Infrastructure",
+      "authors": ["Nadia Eghbal"],
+      "open_access": true,
+      "license": "CC-BY-4.0",
+      "links": [
+        "https://www.fordfoundation.org/learning/library/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/"
+      ]
+    }
+  ]
+}
