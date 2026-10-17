@@ -1,17 +1,29 @@
 <script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, useTemplateRef } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
 import library from '@library/library.json'
 import type { Resource, ResourceType } from '../types'
 import BlueskyIcon from '../components/BlueskyIcon.vue'
+import { amazonUrl } from '../config'
 
 const resources = library.resources as Resource[]
 
-const typeLabels: Record<ResourceType, string> = { book: 'Book', report: 'Report' }
+const typeLabels: Record<ResourceType, string> = {
+  book: 'Book',
+  report: 'Report',
+  'conference-paper': 'Conference paper',
+  preprint: 'Preprint',
+}
 const types = Object.keys(typeLabels) as ResourceType[]
 
 const query = ref('')
 const type = ref<ResourceType | null>(null)
 const openAccessOnly = ref(false)
+
+// The active tag lives in the URL (/#/?tag=ospo), so filtered views can be shared
+const route = useRoute()
+const router = useRouter()
+const tag = computed(() => (typeof route.query.tag === 'string' ? route.query.tag : null))
 
 const normalize = (s: string) =>
   s.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase()
@@ -21,7 +33,8 @@ const results = computed(() => {
   return resources.filter((r) => {
     if (type.value && r.type !== type.value) return false
     if (openAccessOnly.value && !r.open_access) return false
-    const haystack = normalize([r.title, ...r.authors, r.license ?? ''].join(' '))
+    if (tag.value && !r.tags?.includes(tag.value)) return false
+    const haystack = normalize([r.title, ...r.authors, ...(r.tags ?? []), r.license ?? ''].join(' '))
     return terms.every((t) => haystack.includes(t))
   })
 })
@@ -32,6 +45,7 @@ const reset = () => {
   query.value = ''
   type.value = null
   openAccessOnly.value = false
+  router.replace({ query: {} })
 }
 
 // "/" focuses the search field, Escape clears it
@@ -111,8 +125,16 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
       :aria-pressed="openAccessOnly"
       @click="openAccessOnly = !openAccessOnly"
     >
-      Open access
+      Open Access
     </button>
+    <RouterLink
+      v-if="tag"
+      :to="{ query: {} }"
+      class="chip chip-active"
+      :aria-label="`Remove tag filter ${tag}`"
+    >
+      #{{ tag }} <span class="opacity-60">×</span>
+    </RouterLink>
   </nav>
 
   <p class="label mb-3" aria-live="polite">
@@ -123,8 +145,24 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
     <li v-for="r in results" :key="r.title" class="group grid gap-2 border-b border-rule py-7">
       <p class="label flex flex-wrap gap-x-4 gap-y-1">
         <span>{{ typeLabels[r.type] }}</span>
-        <span v-if="r.open_access" class="text-open">Open access</span>
+        <span v-if="r.date" class="text-muted">{{ r.date.slice(0, 4) }}</span>
+        <span v-if="r.open_access" class="text-open">Open Access</span>
         <span v-if="r.license" class="text-muted">{{ r.license }}</span>
+        <RouterLink
+          v-for="t in r.tags"
+          :key="t"
+          :to="{ query: { tag: t } }"
+          class="text-muted underline-offset-4 hover:text-ink hover:underline"
+          >#{{ t }}</RouterLink
+        >
+        <a
+          v-if="r.asin"
+          :href="amazonUrl(r.asin)"
+          target="_blank"
+          rel="sponsored noopener"
+          class="underline-offset-4 hover:underline"
+          >Amazon ↗</a
+        >
       </p>
       <h2 class="font-display text-3xl leading-[1.05] font-bold text-balance sm:text-4xl">
         <a

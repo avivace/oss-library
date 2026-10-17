@@ -6,6 +6,8 @@
       "type": "book",
       "title": "Working in Public: The Making and Maintenance of Open Source Software",
       "authors": ["Nadia Eghbal"],
+      "date": "2020-08-04",
+      "asin": "0578675862",
       "open_access": false,
       "license": null,
       "links": []
@@ -14,6 +16,7 @@
       "type": "book",
       "title": "Program Management for Open Source Projects",
       "authors": ["Ben Cotton"],
+      "date": "2022",
       "open_access": false,
       "license": null,
       "links": []
@@ -22,10 +25,52 @@
       "type": "report",
       "title": "Roads and Bridges: The Unseen Labor Behind Our Digital Infrastructure",
       "authors": ["Nadia Eghbal"],
+      "date": "2016-07-14",
       "open_access": true,
       "license": "CC-BY-4.0",
       "links": [
         "https://www.fordfoundation.org/learning/library/research-reports/roads-and-bridges-the-unseen-labor-behind-our-digital-infrastructure/"
+      ]
+    },
+    {
+      "type": "conference-paper",
+      "title": "Adoption of the Organization of Help According to the Use Case Technique in the Open-Source Software Development Process",
+      "authors": ["Lucrecia Llerena", "Nancy Rodriguez", "Angelita Bosquez", "John W. Castro", "Lister Mera"],
+      "date": "2023-08-20",
+      "open_access": false,
+      "license": null,
+      "links": ["https://link.springer.com/chapter/10.1007/978-3-031-37963-5_72"]
+    },
+    {
+      "type": "preprint",
+      "title": "Public Sector Open Source Program Offices – Archetypes for how to Grow (Common) Institutional Capabilities",
+      "authors": ["Johan Linåker", "Astor Nummelin Carlberg", "Ciaran O'Riordan"],
+      "date": "2026-03-05",
+      "tags": ["ospo"],
+      "open_access": true,
+      "license": "CC-BY-4.0",
+      "links": ["https://arxiv.org/abs/2603.04891"]
+    },
+    {
+      "type": "conference-paper",
+      "title": "Do CONTRIBUTING Files Provide Information about OSS Newcomers’ Onboarding Barriers?",
+      "authors": ["Felipe Fronchetti", "David C. Shepherd", "Igor Wiese", "Christoph Treude", "Marco Aurélio Gerosa", "Igor Steinmacher"],
+      "date": "2023-11-30",
+      "open_access": true,
+      "license": "CC-BY-4.0",
+      "links": ["https://dl.acm.org/doi/10.1145/3611643.3616288"]
+    },
+    {
+      "type": "book",
+      "title": "OSPO Book",
+      "authors": ["TODO Group"],
+      "date": "2025-08-14",
+      "tags": ["ospo"],
+      "open_access": true,
+      "license": "CC-BY-4.0",
+      "links": [
+        "https://ospobook.todogroup.org/",
+        "https://github.com/todogroup/ospology/releases/download/ospo-book-en-v1/OSPOBook.pdf"
       ]
     }
   ]

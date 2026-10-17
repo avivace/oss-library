@@ -50,6 +50,12 @@ const toggleTheme = () => {
         Contributions, source code and feedback on
         <a :href="repo" target="_blank" rel="noopener" class="text-link">GitHub</a>.
       </p>
+      <p>
+        OSS Library is Open Source Software released under
+        <a :href="`${repo}/blob/main/LICENSE`" target="_blank" rel="noopener" class="text-link">GPLv3</a>.
+        The dataset is released as open data under the
+        <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener" class="text-link">ODbL</a>.
+      </p>
       <p class="text-xs">As an Amazon Associate I earn from qualifying purchases.</p>
     </footer>
   </main>

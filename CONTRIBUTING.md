@@ -11,13 +11,17 @@ Each entry in `library/library.json` follows [`library/schema.json`](library/sch
   "type": "book",
   "title": "Title of the resource",
   "authors": ["First Author", "Second Author"],
+  "date": "2024-05-17",
+  "tags": ["ospo"],
   "open_access": false,
   "license": null,
   "links": ["https://example.com"]
 }
 ```
 
-- `type`: `book` or `report`
+- `type`: `book`, `report`, `conference-paper` or `preprint`
+- `date`: publication date as `YYYY-MM-DD`; use `YYYY-MM` or `YYYY` when only that is known
+- `tags` (optional): lowercase topic tags, e.g. `ospo`
 - `license`: an [SPDX identifier](https://spdx.org/licenses/) (e.g. `CC-BY-4.0`), or `null` if proprietary or unknown
 - `links`: the first link is used for the title in the README
 
