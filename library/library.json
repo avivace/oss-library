@@ -7,6 +7,7 @@
       "title": "Working in Public: The Making and Maintenance of Open Source Software",
       "authors": ["Nadia Eghbal"],
       "date": "2020-08-04",
+      "tags": ["funding", "ecosystems"],
       "asin": "0578675862",
       "open_access": false,
       "license": null,
@@ -17,6 +18,7 @@
       "title": "Program Management for Open Source Projects",
       "authors": ["Ben Cotton"],
       "date": "2022",
+      "asin": "B0BPYXB616",
       "open_access": false,
       "license": null,
       "links": []
@@ -26,6 +28,7 @@
       "title": "Roads and Bridges: The Unseen Labor Behind Our Digital Infrastructure",
       "authors": ["Nadia Eghbal"],
       "date": "2016-07-14",
+      "tags": ["funding", "ecosystems"],
       "open_access": true,
       "license": "CC-BY-4.0",
       "links": [
@@ -52,7 +55,7 @@
       "links": ["https://arxiv.org/abs/2603.04891"]
     },
     {
-      "type": "conference-paper",
+      "type": "paper",
       "title": "Do CONTRIBUTING Files Provide Information about OSS Newcomers’ Onboarding Barriers?",
       "authors": ["Felipe Fronchetti", "David C. Shepherd", "Igor Wiese", "Christoph Treude", "Marco Aurélio Gerosa", "Igor Steinmacher"],
       "date": "2023-11-30",
@@ -72,6 +75,62 @@
         "https://ospobook.todogroup.org/",
         "https://github.com/todogroup/ospology/releases/download/ospo-book-en-v1/OSPOBook.pdf"
       ]
+    },
+    {
+      "type": "paper",
+      "title": "Beyond the Repository",
+      "authors": ["Amanda Casari", "Julia Ferraioli", "Juniper Lovato"],
+      "date": "2023-09-22",
+      "tags": ["ecosystems"],
+      "open_access": true,
+      "license": null,
+      "links": [
+        "https://dl.acm.org/doi/10.1145/3605160",
+        "https://dl.acm.org/doi/pdf/10.1145/3605160"
+      ]
+    },
+    {
+      "type": "paper",
+      "title": "Freeriding and Rebellion: An Investigation of Open Source Vendor Relicensing and Member Hard Forking Events",
+      "authors": ["Dawn Foster", "Matt Germonprez"],
+      "date": "2026-09-08",
+      "tags": ["licenses", "forking"],
+      "open_access": true,
+      "license": "CC-BY-4.0",
+      "links": ["https://onlinelibrary.wiley.com/doi/10.1111/isj.70060"]
+    },
+    {
+      "type": "conference-paper",
+      "title": "How to characterize the health of an Open Source Software project? A snowball literature review of an emerging practice",
+      "authors": ["Johan Linåker", "Efi Papatheocharous", "Thomas Olsson"],
+      "date": "2022-08-01",
+      "tags": ["health"],
+      "open_access": true,
+      "license": "CC-BY-4.0",
+      "links": ["https://arxiv.org/abs/2208.01105"]
+    },
+    {
+      "type": "conference-paper",
+      "title": "Making Impact Visible in Funding of Open Source Software: A Study of the Funders’ Perspective",
+      "authors": ["Johan Linåker", "Kevin Lumbard", "Georg Link"],
+      "date": "2026-10-05",
+      "tags": ["funding", "health", "ecosystems"],
+      "open_access": true,
+      "license": "CC-BY-4.0",
+      "links": [
+        "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESEM.2026.8",
+        "https://drops.dagstuhl.de/storage/00lipics/lipics-vol394-esem2026/LIPIcs.ESEM.2026.8/LIPIcs.ESEM.2026.8.pdf"
+      ]
+    },
+    {
+      "type": "paper",
+      "title": "Making Open Source Project Health Transparent",
+      "authors": ["Sean P. Goggins", "Matt Germonprez", "Kevin Lumbard"],
+      "date": "2021-08-02",
+      "tags": ["health"],
+      "open_access": false,
+      "license": null,
+      "links": ["https://ieeexplore.ieee.org/document/9504501"]
     }
   ]
 }

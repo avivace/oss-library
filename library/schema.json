@@ -16,7 +16,7 @@
       "required": ["type", "title", "authors", "open_access", "links"],
       "additionalProperties": false,
       "properties": {
-        "type": { "enum": ["book", "report", "conference-paper", "preprint"] },
+        "type": { "enum": ["book", "report", "paper", "conference-paper", "preprint"] },
         "title": { "type": "string" },
         "authors": { "type": "array", "items": { "type": "string" } },
         "date": {

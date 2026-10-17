@@ -3,7 +3,7 @@
 {{ description }}
 
 Browse and search it at **[ossl.avivace.com](https://ossl.avivace.com)**.
-{% for section, type in [("Books", "book"), ("Reports", "report"), ("Conference papers", "conference-paper"), ("Preprints", "preprint")] %}
+{% for section, type in [("Books", "book"), ("Reports", "report"), ("Papers", "paper"), ("Conference papers", "conference-paper"), ("Preprints", "preprint")] %}
 ## {{ section }}
 
 {% for r in resources if r.type == type -%}

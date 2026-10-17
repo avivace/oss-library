@@ -11,6 +11,7 @@ const resources = library.resources as Resource[]
 const typeLabels: Record<ResourceType, string> = {
   book: 'Book',
   report: 'Report',
+  paper: 'Paper',
   'conference-paper': 'Conference paper',
   preprint: 'Preprint',
 }
@@ -147,7 +148,6 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
         <span>{{ typeLabels[r.type] }}</span>
         <span v-if="r.date" class="text-muted">{{ r.date.slice(0, 4) }}</span>
         <span v-if="r.open_access" class="text-open">Open Access</span>
-        <span v-if="r.license" class="text-muted">{{ r.license }}</span>
         <RouterLink
           v-for="t in r.tags"
           :key="t"

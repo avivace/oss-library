@@ -1,4 +1,4 @@
-export type ResourceType = 'book' | 'report' | 'conference-paper' | 'preprint'
+export type ResourceType = 'book' | 'report' | 'paper' | 'conference-paper' | 'preprint'
 
 export interface Resource {
   type: ResourceType
