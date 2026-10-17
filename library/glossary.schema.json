@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "OSS Library Glossary",
+  "type": "object",
+  "required": [
+    "terms"
+  ],
+  "properties": {
+    "terms": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/term"
+      }
+    }
+  },
+  "$defs": {
+    "term": {
+      "type": "object",
+      "required": [
+        "term",
+        "quote",
+        "source"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "term": {
+          "type": "string"
+        },
+        "quote": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          },
+          "description": "Paragraphs quoted verbatim from the source"
+        },
+        "source": {
+          "type": "object",
+          "required": [
+            "title",
+            "author",
+            "url"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "title": {
+              "type": "string"
+            },
+            "author": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            },
+            "license": {
+              "type": "string",
+              "description": "SPDX identifier of the quoted text, if any"
+            }
+          }
+        }
+      }
+    }
+  }
+}

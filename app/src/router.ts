@@ -8,6 +8,7 @@ export default createRouter({
     { path: '/', name: 'library', component: LibraryView },
     { path: '/about', name: 'about', component: () => import('./views/AboutView.vue') },
     { path: '/lists', name: 'lists', component: () => import('./views/ListsView.vue') },
+    { path: '/glossary', name: 'glossary', component: () => import('./views/GlossaryView.vue') },
   ],
-  scrollBehavior: () => ({ top: 0 }),
+  scrollBehavior: (to) => (to.hash ? { el: to.hash } : { top: 0 }),
 })
