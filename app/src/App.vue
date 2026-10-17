@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import ArrowIcon from './components/ArrowIcon.vue'
 
 const repo = 'https://github.com/avivace/oss-library'
 
@@ -28,7 +29,7 @@ const toggleTheme = () => {
         <RouterLink to="/lists" class="nav-link">Lists</RouterLink>
         -->
         <a :href="`${repo}/blob/main/CONTRIBUTING.md`" target="_blank" rel="noopener" class="nav-link">
-          Contribute ↗
+          Contribute <ArrowIcon class="size-[0.75em] align-[-0.05em]" />
         </a>
       </nav>
       <button

@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router'
 import library from '@library/library.json'
 import type { Resource, ResourceType } from '../types'
 import BlueskyIcon from '../components/BlueskyIcon.vue'
+import ArrowIcon from '../components/ArrowIcon.vue'
 import { amazonUrl } from '../config'
 
 const resources = library.resources as Resource[]
@@ -167,7 +168,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
           target="_blank"
           rel="sponsored noopener"
           class="underline-offset-4 hover:underline"
-          >Amazon ↗</a
+          >Amazon <ArrowIcon class="size-[0.75em] align-[-0.05em]" /></a
         >
       </p>
       <h2 class="font-display text-3xl leading-[1.05] font-bold text-balance sm:text-4xl">
@@ -178,7 +179,7 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
           rel="noopener"
           class="decoration-2 underline-offset-[6px] hover:underline"
         >
-          {{ r.title }}<span class="ml-1.5 inline-block font-sans text-xl font-normal text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+          {{ r.title }}<span class="ml-1.5 inline-block text-muted transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"><ArrowIcon class="size-[0.45em] align-[0.15em]" /></span>
         </a>
         <template v-else>{{ r.title }}</template>
       </h2>
