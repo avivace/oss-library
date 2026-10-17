@@ -18,7 +18,7 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <main class="mx-auto flex min-h-svh max-w-3xl flex-col px-6 py-12 sm:py-16">
+  <main class="mx-auto flex min-h-svh max-w-3xl flex-col px-3 py-6 sm:px-6 sm:py-16">
     <div class="mb-14 flex items-center justify-between gap-4 border-t-2 border-ink pt-3">
       <nav class="label flex flex-wrap gap-x-5 gap-y-1" aria-label="Main">
         <RouterLink to="/" class="nav-link">Library</RouterLink>
