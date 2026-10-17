@@ -9,7 +9,7 @@ with open(ROOT / "library" / "library.json") as f:
     library = json.load(f)
 
 env = Environment(loader=FileSystemLoader(ROOT / "scripts" / "templates"), keep_trailing_newline=True)
-readme = env.get_template("README.md.j2").render(resources=library["resources"])
+readme = env.get_template("README.md.j2").render(**library)
 
 with open(ROOT / "README.md", "w") as f:
     f.write(readme)

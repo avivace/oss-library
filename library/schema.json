@@ -4,6 +4,7 @@
   "type": "object",
   "required": ["resources"],
   "properties": {
+    "description": { "type": "string" },
     "resources": {
       "type": "array",
       "items": { "$ref": "#/$defs/resource" }

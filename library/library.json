@@ -1,10 +1,11 @@
 {
   "$schema": "./schema.json",
+  "description": "A collection of books, articles, talks, papers, blog posts, podcasts and opinions on (F)OSS, licenses and OSPOs (Open Source Program Offices), for open source practitioners and anyone building or consuming open source software.",
   "resources": [
     {
       "type": "book",
       "title": "Working in Public: The Making and Maintenance of Open Source Software",
-      "authors": ["Nadia Asparouhova"],
+      "authors": ["Nadia Eghbal"],
       "open_access": false,
       "license": null,
       "links": []
