@@ -138,12 +138,18 @@ onUnmounted(() => window.removeEventListener('keydown', onKey))
     </RouterLink>
   </nav>
 
+  <!-- Results counter, hidden for a more essential look. To restore it, uncomment this
+       and remove the screen-reader-only copy below.
   <p class="label mb-3" aria-live="polite">
+    {{ results.length }} {{ results.length === 1 ? 'resource' : 'resources' }}
+  </p>
+  -->
+  <p class="sr-only" aria-live="polite">
     {{ results.length }} {{ results.length === 1 ? 'resource' : 'resources' }}
   </p>
 
   <TransitionGroup tag="ol" name="list" class="relative border-t-2 border-ink">
-    <li v-for="r in results" :key="r.title" class="group grid gap-2 border-b border-rule py-7">
+    <li v-for="r in results" :key="r.title" class="group grid gap-2 border-b border-rule py-7 last:border-b-0">
       <p class="label flex flex-wrap gap-x-4 gap-y-1">
         <span>{{ typeLabels[r.type] }}</span>
         <span v-if="r.date" class="text-muted">{{ r.date.slice(0, 4) }}</span>

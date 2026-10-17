@@ -18,43 +18,52 @@ const toggleTheme = () => {
 </script>
 
 <template>
-  <main class="mx-auto max-w-3xl px-6 py-12 sm:py-16">
+  <main class="mx-auto flex min-h-svh max-w-3xl flex-col px-6 py-12 sm:py-16">
     <div class="mb-14 flex items-center justify-between gap-4 border-t-2 border-ink pt-3">
       <nav class="label flex flex-wrap gap-x-5 gap-y-1" aria-label="Main">
         <RouterLink to="/" class="nav-link">Library</RouterLink>
+        <RouterLink to="/glossary" class="nav-link">Glossary</RouterLink>
+        <!-- Hidden until they have content:
         <RouterLink to="/about" class="nav-link">About</RouterLink>
         <RouterLink to="/lists" class="nav-link">Lists</RouterLink>
+        -->
         <a :href="`${repo}/blob/main/CONTRIBUTING.md`" target="_blank" rel="noopener" class="nav-link">
           Contribute ↗
         </a>
       </nav>
       <button
-        class="label flex shrink-0 cursor-pointer items-center gap-2 hover:underline"
+        class="flex shrink-0 cursor-pointer items-center p-1 transition-opacity hover:opacity-60"
         :aria-label="`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`"
+        :title="`Switch to ${theme === 'dark' ? 'light' : 'dark'} theme`"
         @click="toggleTheme"
       >
         <svg viewBox="0 0 16 16" class="size-3.5" aria-hidden="true">
           <circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5" />
           <path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor" />
         </svg>
-        {{ theme === 'dark' ? 'Light' : 'Dark' }}
       </button>
     </div>
 
-    <RouterView />
+    <!-- flex-1 keeps the footer at the bottom of the window on short pages -->
+    <div class="flex-1">
+      <RouterView />
+    </div>
 
-    <footer class="mt-24 grid gap-3 border-t-2 border-ink pt-6 text-sm leading-relaxed text-muted">
-      <p>
+    <footer class="grid gap-3 border-t-2 border-ink pt-4 text-sm text-muted">
+      <p class="flex flex-wrap gap-x-2 gap-y-1">
         Maintained by
-        <a href="https://github.com/avivace" target="_blank" rel="noopener" class="text-link">Antonio Vivace</a>.
-        Contributions, source code and feedback on
-        <a :href="repo" target="_blank" rel="noopener" class="text-link">GitHub</a>.
-      </p>
-      <p>
-        OSS Library is Open Source Software released under
-        <a :href="`${repo}/blob/main/LICENSE`" target="_blank" rel="noopener" class="text-link">GPLv3</a>.
-        The dataset is released as open data under the
-        <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener" class="text-link">ODbL</a>.
+        <a href="https://github.com/avivace" target="_blank" rel="noopener" class="footer-link">Antonio Vivace</a>
+        <span aria-hidden="true">-</span>
+        <a :href="repo" target="_blank" rel="noopener" class="footer-link">GitHub</a>
+        <span aria-hidden="true">-</span>
+        <span
+          >Code <a :href="`${repo}/blob/main/LICENSE`" target="_blank" rel="noopener" class="footer-link">GPLv3</a></span
+        >
+        <span aria-hidden="true">/</span>
+        <span
+          >Data
+          <a href="https://opendatacommons.org/licenses/odbl/" target="_blank" rel="noopener" class="footer-link">ODbL</a></span
+        >
       </p>
       <p class="text-xs">As an Amazon Associate I earn from qualifying purchases.</p>
     </footer>
@@ -66,6 +75,9 @@ const toggleTheme = () => {
 
 .nav-link {
   @apply text-muted underline-offset-4 transition-colors hover:text-ink;
+}
+.footer-link {
+  @apply underline-offset-4 transition-colors hover:text-ink hover:underline;
 }
 .nav-link.router-link-exact-active {
   @apply text-ink underline decoration-2;
